@@ -33,6 +33,10 @@
     font-size: 16px;
   }
 
+  .connectButton {
+    cursor: pointer;
+  }
+
   .logo {
     display: flex;
     text-align: center;
