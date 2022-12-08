@@ -1,0 +1,66 @@
+.container{
+    display: flex;
+    flex-direction: column; 
+    height: 100%;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+  }
+
+  .loginBox{
+    display: flex;
+    width: 400px;
+    height: 460px;
+    justify-content: center;
+    box-shadow: 0px 1px 13px rgba(80, 59, 125, 0.25);
+    border-radius: 2px;
+    margin-top: 120px ;
+    padding: 150px;
+  }
+
+  .connectButton {
+    background-color: #00A3FF; 
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 6px 20px;
+    margin-top: 50px;
+    margin-left: 50px;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .logo {
+    display: flex;
+    text-align: center;
+    margin-top: -415px;
+    font-family: 'Post No Bills Colombo Medium';
+    font-style: normal;
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  .loginInput {
+    padding: 12px 20px;
+    border-radius: 4px;
+    border-width: 1px;
+  }
+
+  .pwdInput {
+    padding: 12px 20px;
+    border-radius: 4px;
+    border-width: 1px;
+    -webkit-text-security: disc;
+  } 
+
+  .label {
+    line-height: 2;
+  }
+
+  .slogan {
+    margin-top: 385px;
+    font-style: italic;
+  }
