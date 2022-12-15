@@ -18,11 +18,11 @@ export default function Login() {
         <div className={styles.loginBox}>
             
             <form action='/'>
-                <label className={styles.label}> Login : </label><br></br>
-                <input type="text" className={styles.loginInput} placeholder='Login'></input><br></br><br></br>
-                <label className={styles.label}> Password : </label><br></br>
-                <input type="text" className={styles.pwdInput} placeholder="Password"></input><br></br><br></br>
-                <input type="submit" className={styles.connectButton} value="Connect"></input>
+                <label className={styles.label}> Identifiant : </label><br></br>
+                <input type="text" className={styles.loginInput} placeholder='Identifiant'></input><br></br><br></br>
+                <label className={styles.label}> Mot de passe : </label><br></br>
+                <input type="password" className={styles.pwdInput} placeholder="Mot de passe"></input><br></br><br></br>
+                <input type="submit" className={styles.connectButton} value="Connexion"></input>
             </form>
         </div>
         <div className={styles.logo}>JOBZ</div>

@@ -13,7 +13,7 @@ import imgHp from '../styles/images/hp.png'
 import imgInfos from '../styles/images/information.png'
 import imgLocalisation from '../styles/images/balance.png'
 import imgRetour from '../styles/images/retour_arriere.png'
-import imgSpaceX from '../styles/images/spacex.png'
+import imgNike from '../styles/images/nike.png'
 import imgSt from '../styles/images/st.png'
 import imgProfil from '../styles/images/profil.png'
 
@@ -22,8 +22,10 @@ import { useRouter } from 'next/router'
 
 function Main() {
   let router= useRouter()
-  function redirectInformations() {   router.push('/informations')}
-  function redirectMessages(){ router.push('/messages')}
+  function redirect() {   router.push('/test')}
+  function redirectMatchs(){ router.push('/')}
+  function redirectConversationSt(){ router.push('/conversationSt')}
+
   return (
   <div className={styles.container}>
   <div className={styles.partiegauche}>
@@ -46,36 +48,36 @@ function Main() {
 
     <div className={styles.contenu}>
       <div className={styles.matchmessages}>
-        <div className={styles.match}>Matchs</div>
-        <a onClick={redirectMessages} className={styles.messages}>Messages</a>
+        <a onClick={redirectMatchs} className={styles.matchDansMessages}>Matchs</a>
+        <a className={styles.messagesDansMessages}>Messages</a>
         
       </div>
 
-      <div className={styles.images}>
-      <Image
-        src={imgHp}
-        alt="logo_apple"
-        width={180}
-        height={180}
-      />
-      <Image
-        src={imgGoogle}
-        alt="logo_google"
-        width={180}
-        height={180}
-      />
-      <Image
-        src={imgFacebook}
-        alt="logo_facebook"
-        width={180}
-        height={180}
-      />
-      <Image
-        src={imgSt}
-        alt="logo_spaceX"
-        width={180}
-        height={180}
-      />
+      <div className={styles.messagesGroup}>
+        <div className = {styles.st} onClick={redirectConversationSt}>
+            <Image className = {styles.imageSt}
+            src={imgSt}
+            alt=""
+            width={60}
+            height={60}
+            />
+            <div className = {styles.mess}>
+                <h1>St Microelectronics</h1>
+                <p>Eux : Votre profil nous intéresse, pouvez-vous nous faire part de votre cv ainsi que...</p>
+            </div>
+        </div>
+        <div className = {styles.hp}>
+            <Image className = {styles.imageHp}
+            src={imgHp}
+            alt=""
+            width={60}
+            height={60}
+            />
+            <div className = {styles.mess}>
+            <h1>Hewlett-Packard</h1>
+            <p>Vous : Merci de votre réponse, à bientôt j’espère.</p>
+            </div>
+        </div>
       </div>
 
       <div className={styles.logobas}>
@@ -93,26 +95,26 @@ function Main() {
       <div className={styles.imageLikeable}>
       <div className={styles.descriptionRapide}>
         <Image className={styles.imageAtos}
-            src={imgAtos}
+            src={imgNike}
             alt="photo_cv/recrutement"
             width={180}
-            height={68}
+            height={100}
           />
         
         
           <h4>Type d'offre :</h4>
-          <p>Stage</p>
+          <p>Alternance</p>
           <br />
           <br />
           <h4>Mission :</h4>
-          <p>Maintenance de la base de données</p>
+          <p>Refonte du site web de Nike</p>
           <br />
           <br />
           <h4>Compétences attendues :</h4>
-          <p>Bac +3 minimum domaine informatique, connaissances en Oracle</p>
+          <p>Bac +5 minimum domaine informatique + de 10 années d'expérience</p>
           <br />
           <br />
-          <p>Durée : 5 mois, disponible début janvier 2023</p>
+          <p>Disponible début janvier 2023</p>
         </div>
         </div>
         
@@ -135,14 +137,12 @@ function Main() {
             width={60}
             height={60}
           />
-          <a onClick={redirectInformations}>
-          <Image 
+          <Image
             src={imgInfos}
             alt="voir_infos"
             width={60}
             height={60}
           />
-          </a>
         </div>
     </div>
   </div>

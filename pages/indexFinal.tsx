@@ -13,28 +13,32 @@ import imgHp from '../styles/images/hp.png'
 import imgInfos from '../styles/images/information.png'
 import imgLocalisation from '../styles/images/balance.png'
 import imgRetour from '../styles/images/retour_arriere.png'
-import imgSpaceX from '../styles/images/spacex.png'
+import imgAtos2 from '../styles/images/atos2.png'
 import imgSt from '../styles/images/st.png'
+import imgNike from '../styles/images/nike.png'
 import imgProfil from '../styles/images/profil.png'
 
 
 import { useRouter } from 'next/router'
 
-function Main() {
+export default function indexAvecAtos() {
   let router= useRouter()
   function redirectInformations() {   router.push('/informations')}
   function redirectMessages(){ router.push('/messages')}
+  function redirectProfil(){ router.push('/profile')}
   return (
   <div className={styles.container}>
   <div className={styles.partiegauche}>
     <div className={styles.apropos}>
+      <a onClick={redirectProfil} className={styles.photoTheo}>
       <Image className={styles.logoProfil}
         src={imgProfil}
         alt="photo_profil"
         width={40}
         height={40}
       />
-      <p className={styles.nomUtilisateur}>Théo</p>
+      </a>
+      <p className={styles.nomUtilisateur}>Théo Guilbavux</p>
       <Image
         src={imgFramboise}
         alt="fruit_tuilisateur"
@@ -76,6 +80,12 @@ function Main() {
         width={180}
         height={180}
       />
+      <Image
+        src={imgAtos2}
+        alt=""
+        width={180}
+        height={180}
+      />
       </div>
 
       <div className={styles.logobas}>
@@ -93,26 +103,26 @@ function Main() {
       <div className={styles.imageLikeable}>
       <div className={styles.descriptionRapide}>
         <Image className={styles.imageAtos}
-            src={imgAtos}
+            src={imgNike}
             alt="photo_cv/recrutement"
             width={180}
-            height={68}
+            height={100}
           />
         
         
           <h4>Type d'offre :</h4>
-          <p>Stage</p>
+          <p>Alternance</p>
           <br />
           <br />
           <h4>Mission :</h4>
-          <p>Maintenance de la base de données</p>
+          <p>Refonte du site web de Nike</p>
           <br />
           <br />
           <h4>Compétences attendues :</h4>
-          <p>Bac +3 minimum domaine informatique, connaissances en Oracle</p>
+          <p>Bac +5 minimum domaine informatique + de 10 années d'expérience</p>
           <br />
           <br />
-          <p>Durée : 5 mois, disponible début janvier 2023</p>
+          <p>Disponible début janvier 2023</p>
         </div>
         </div>
         
@@ -153,4 +163,4 @@ function Main() {
 )
 }
 
-export default Main
+

@@ -9,9 +9,12 @@ export default function updateProfile() {
   let router= useRouter()
   
 
-  function redirect() {
-       router.push('/index')
+  function redirectFinal() {
+       router.push('/indexFinal')
     }
+  function redirectDeconnexion(){
+      router.push('/login')
+  }
 
 
   return (
@@ -23,9 +26,9 @@ export default function updateProfile() {
             </div><br></br>
 
             <div className={styles.form}>
-                <form action='/' >
+                <form>
                     <label className={styles.label}> Nom </label><br></br>
-                    <input type="text" className={styles.input} value="Théo"></input><br></br><br></br>
+                    <input type="text" className={styles.input} placeholder="Théo"></input><br></br><br></br>
                     <label className={styles.label}> Description courte </label><br></br>
                     <input type="text" className={styles.input} placeholder='étudiant dynamique et motivé en deuxième année de master informatique et cognition...'></input><br></br><br></br>
                     <label className={styles.label}> Type d'emploi recherché </label><br></br>
@@ -40,8 +43,8 @@ export default function updateProfile() {
                     <label className={styles.label}> Diplômes obtenus </label><br></br>
                     <input type="text" className={styles.input} placeholder='Master 1 - MIASHS IC, Licence MIASHS...'></input><br></br><br></br>
                     <div>
-                        <input type="submit" className={styles.buttonSave} value="Enregistrer"></input>
-                        <input type="submit" className={styles.buttonCancel} value="Annuler"></input>
+                        <input type="submit" className={styles.buttonSave} value="Enregistrer" onClick={redirectFinal}></input>
+                        <input type="submit" className={styles.buttonCancel} value="Deconnexion" onClick={redirectDeconnexion}></input>
                     </div>
             </form>
             </div>    
